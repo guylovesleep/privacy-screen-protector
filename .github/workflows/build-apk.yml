@@ -21,11 +21,11 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-    - name: Grant execute permission for gradlew
+    - name: Generate Gradle Wrapper
       run: |
         cd android-app
-        # We don't have gradlew checked in, so let's generate it
-        gradle wrapper
+        # Force Gradle 8.4 which is compatible with Android Gradle Plugin 8.1
+        gradle wrapper --gradle-version 8.4
 
     - name: Build with Gradle
       run: |
