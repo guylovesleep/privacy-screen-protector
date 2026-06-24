@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redmi Note 14 Pro 4G - Privacy Screen</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <h1>Privacy Shield</h1>
+      <p>Optimized for Redmi Note 14 Pro 4G</p>
+    </header>
+
+    <!-- Controls Section -->
+    <section class="controls-panel">
+      <!-- Main Toggle -->
+      <div class="control-group switch-group">
+        <label for="masterToggle" class="switch-label">Enable Privacy Filter</label>
+        <label class="switch">
+          <input type="checkbox" id="masterToggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+
+      <!-- Intensity Slider -->
+      <div class="control-group">
+        <div class="label-row">
+          <label for="intensitySlider">Filter Intensity</label>
+          <span id="intensityValue">70%</span>
+        </div>
+        <input type="range" id="intensitySlider" min="0" max="100" value="70" class="range-slider">
+      </div>
+
+      <!-- Pattern Selector -->
+      <div class="control-group">
+        <label>Filter Pattern</label>
+        <div class="pattern-options">
+          <button class="pattern-btn active" data-pattern="grid">Grid Mesh</button>
+          <button class="pattern-btn" data-pattern="lines">Horizontal Lines</button>
+          <button class="pattern-btn" data-pattern="dim">Dark Tint</button>
+          <button class="pattern-btn" data-pattern="warm">Warm Tint</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Simulator Section -->
+    <section class="simulator-section">
+      <h2>Live Simulator (1080x2400 Ratio)</h2>
+      
+      <div class="phone-mockup">
+        <div class="phone-screen" id="phoneScreen">
+          <!-- Dummy Content to simulate phone UI -->
+          <div class="dummy-ui">
+            <div class="status-bar">
+              <span>12:00</span>
+              <div class="status-icons">
+                <span class="icon signal">📶</span>
+                <span class="icon battery">🔋</span>
+              </div>
+            </div>
+            <div class="dummy-content">
+              <h3>Private Messages</h3>
+              <div class="msg">
+                <div class="avatar"></div>
+                <div class="msg-text">
+                  <div class="line short"></div>
+                  <div class="line"></div>
+                </div>
+              </div>
+              <div class="msg">
+                <div class="avatar"></div>
+                <div class="msg-text">
+                  <div class="line"></div>
+                  <div class="line shorter"></div>
+                </div>
+              </div>
+              <div class="msg">
+                <div class="avatar"></div>
+                <div class="msg-text">
+                  <div class="line medium"></div>
+                  <div class="line short"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- The actual Privacy Overlay -->
+          <div class="privacy-overlay" id="privacyOverlay"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
