@@ -21,16 +21,15 @@ jobs:
         distribution: 'temurin'
         cache: gradle
 
-    - name: Generate Gradle Wrapper
-      run: |
-        cd android-app
-        # Force Gradle 8.4 which is compatible with Android Gradle Plugin 8.1
-        gradle wrapper --gradle-version 8.4
+    - name: Setup Gradle
+      uses: gradle/actions/setup-gradle@v4
+      with:
+        gradle-version: '8.4'
 
     - name: Build with Gradle
       run: |
         cd android-app
-        ./gradlew assembleDebug
+        gradle assembleDebug
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
